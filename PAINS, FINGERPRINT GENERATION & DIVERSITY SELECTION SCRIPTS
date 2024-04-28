@@ -1,0 +1,8 @@
+###RUNNING A PAINS FILTERING JOB ON THE HPC#########
+$SCHRODINGER/utilities/canvasSearch -JOB ##JOB NAME#### -HOST #####HPC HOST####:###NUMBER OF CPU##### -imae INPUTFILE.mae#### -filter -file ###PAINSFILTERFILE.cflt -omae ###OUTPUTFILENAME.maegz######
+
+#########FINGERPRINT GENERATION###########
+canvasFPGen -JOB ####JOBNAME##### -HOST ###HPC HOST######:####NUMBER OF CPU##### -icsv #####INPUTFILE.csv -name 1 -fptype linear -echoSMILES -odata ####OUTPUTDATAFIE########
+
+#######CANVAS DIVERSITY SELECTION#########
+canvasDBCS -JOB #####JOBNAME#### -ifp ####INPUT FINGERPRINT FILE.fp -n 100000 -o #######OUTPUT FILE NAME.csv -method sphere -rowNames -guiprop
